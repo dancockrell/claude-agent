@@ -1,0 +1,17 @@
+*.key
+*.log
+*.pem
+*.pyc
+.DS_Store
+.env
+.env.*
+.venv/
+Thumbs.db
+__pycache__/
+build/
+deliver/
+dist/
+done/
+node_modules/
+results/
+venv/

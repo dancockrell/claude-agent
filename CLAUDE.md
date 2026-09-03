@@ -42,8 +42,54 @@ already had the whole guess-then-player-override pattern implemented three
 times over (`portraits.ts`, `creatureArt.ts`, `playerArt.ts`) and needed a
 new domain on the existing one. The tell was writing "I will reuse its
 helper to avoid a second copy" - noticing the duplication and patching over
-it instead of confronting it. If you find yourself justifying why your copy
-is acceptable, you are forking.
+it instead of confronting it. **If you find yourself justifying why your
+copy is acceptable, you are forking.**
+
+Do not leave noodles to nowhere: no unused scaffolds, orphaned modules,
+speculative adapters, dead feature flags, abandoned compatibility layers, or
+alternate flows without a current caller and an explicit product purpose.
+Uncertainty is not permission to route around a problem. Preserve valuable
+user work, resolve conflicts in place, and commit the unified result to the
+existing history so every contributor works from one source of truth.
+
+### Operating standard
+
+1. Read this rule before planning or editing. A narrower instruction file
+   below a directory may add local constraints; it never weakens this one.
+2. Inspect the live repository first: current branch, status, upstream,
+   recent history, open work, relevant tests, and the actual caller path.
+   Never design from a stale summary when the current state is available.
+3. Treat uncommitted changes as another contributor's work. Preserve them.
+   Understand overlapping edits before touching them. Integrate complementary
+   work into one implementation instead of choosing by author or recency.
+4. Fix root causes. Keep one owner per responsibility, one canonical data
+   flow, one source of truth, one truthful user-facing state. Prefer
+   established project patterns, small interfaces, explicit schemas,
+   deterministic behaviour, searchable names.
+5. Keep instructions local. Put a rule beside the system it governs; put
+   cross-project rules in the canonical file and generate the copies.
+6. Do not add placeholders that can be mistaken for finished work. Mark
+   unavoidable stand-ins with ownership, intended replacement, and acceptance
+   criteria.
+7. Validate in proportion to risk: narrow test first, then the relevant
+   suite, build, static and format checks. Inspect visible behaviour for UI
+   or art changes. **A command that was not run is not a pass.**
+8. Report state truthfully. Distinguish local edits, committed work, pushed
+   branches, open PRs, pending CI, passing CI, and merged code. Never claim
+   publication or success before verifying it.
+9. Make cohesive commits at meaningful checkpoints. Stage only intended
+   files. Sync before publication.
+10. Never commit credentials, keys, tokens, personal data, or assets of
+    uncertain provenance. Record source, licence, and authorship for every
+    admitted external or generated asset.
+
+Merged 3 Sep 2026 from two independently written versions of this rule -
+this one and `codex-root`'s `AGENTS.md` - because two policy documents
+saying the same thing is the very defect the rule names. The operating
+standard above is codex-root's, kept nearly verbatim; the three moves, the
+"no fourth move" framing, the justification tell, and the application to
+prose and history came from this side. Neither was deleted: they were
+integrated, which is move 1.
 
 > Generated from `~/.claude/CLAUDE.md` by `dev/claude-config/stamp-rules.py`. Do not edit this block: edit the source and re-run. The full working agreements live in that file.
 

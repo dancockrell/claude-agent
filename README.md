@@ -49,6 +49,6 @@ from version control — together they run to several gigabytes.
 - ComfyUI listening on `127.0.0.1:8188`
 - `edge-tts` available on the path
 
-See [`gf-forge`](../gf-forge) for the ComfyUI side, which covers the same
+See [`gf-forge`](https://github.com/dancockrell/gf-forge) for the ComfyUI side, which covers the same
 ground with a richer job format and is the better starting point for new
 work.
